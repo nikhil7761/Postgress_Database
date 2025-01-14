@@ -1,0 +1,1 @@
+pg_dump -U testbkp -d PostgreSQL 16 -F c -f "C:\bkppostgres"
