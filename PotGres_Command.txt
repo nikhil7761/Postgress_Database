@@ -1,0 +1,12 @@
+postgres_linux
+
+sudo -i -u postgres
+
+createuser --interactive
+
+
+psql
+
+
+ALTER USER testuser WITH Password
+
