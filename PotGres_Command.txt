@@ -10,3 +10,26 @@ psql
 
 ALTER USER testuser WITH Password
 
+sudo -u postgres psql
+CREATE ROLE ubuntu WITH LOGIN PASSWORD 'yourpassword';
+ALTER ROLE ubuntu CREATEDB;
+CREATE DATABASE ubuntudb OWNER ubuntu;
+\q
+psql -U myuser -d mydb -h 127.0.0.1
+CREATE ROLE ubuntu WITH LOGIN PASSWORD 'StrongPass123';
+ALTER ROLE ubuntu CREATEDB;
+CREATE DATABASE ubuntudb OWNER ubuntu;
+
+
+ALTER USER ADMIN WITH PASSWORD 'NewStrongPassword123';
+ALTER USER ADMIN WITH PASSWORD '12345678';
+
+
+
+sudo -u postgres psql -c "\du"
+ 
+
+ALTER ROLE admin WITH SUPERUSER;
+
+\du
+
